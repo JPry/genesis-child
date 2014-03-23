@@ -1,12 +1,23 @@
 <?php
-
+/**
+ * Functions
+ *
+ * @package JPry_Genesis_Child
+ * @subpackage JPry_Child_Theme
+ * @since 1.0
+ * @author Jeremy Pry
+ * @copyright (c) 2014, Jeremy Pry
+ * @license http://opensource.org/licenses/gpl-2.0.php GNU Public License
+ */
 
 // Possibly include the JPry_Singleton class
 if ( ! class_exists( 'JPry_Singleton', false ) ) {
 	require_once( CHILD_THEME_DIR . '/classes/jpry-singleton.php' );
 }
 
-
+/**
+ * The main Theme customizations
+ */
 class JPry_Child_Theme extends JPry_Singleton {
 
 	/**
