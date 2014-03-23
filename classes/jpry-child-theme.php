@@ -1,5 +1,12 @@
 <?php
 
+
+// Possibly include the JPry_Singleton class
+if ( ! class_exists( 'JPry_Singleton', false ) ) {
+	require_once( CHILD_THEME_DIR . '/classes/jpry-singleton.php' );
+}
+
+
 class JPry_Child_Theme extends JPry_Singleton {
 
 	/**
