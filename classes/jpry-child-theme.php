@@ -1,6 +1,6 @@
 <?php
 /**
- * Functions
+ * The main set of Theme customizations
  *
  * @package JPry_Genesis_Child
  * @subpackage JPry_Child_Theme
