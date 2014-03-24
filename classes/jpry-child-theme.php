@@ -24,9 +24,36 @@ class JPry_Child_Theme extends JPry_Singleton {
 	 * Constructor.
 	 *
 	 * Add the methods of this class to appropriate WordPress hooks
+	 *
+	 * @since 1.0
 	 */
 	protected function __construct() {
+		// All of the add/remove_theme_support() stuff
 		add_action( 'genesis_setup', array( $this, 'child_theme_setup' ), 15 );
+
+		// Actions
+		$this->_actions();
+
+		// Filters
+		$this->_filters();
+	}
+
+	/**
+	 * All of the WordPress actions that we're modifying
+	 *
+	 * @since 1.0
+	 */
+	protected function _actions() {
+
+	}
+
+	/**
+	 * All of the WordPress filters that we're modifying
+	 *
+	 * @since 1.0
+	 */
+	protected function _filters() {
+
 	}
 
 	/**
