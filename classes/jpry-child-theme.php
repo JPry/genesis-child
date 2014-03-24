@@ -44,7 +44,11 @@ class JPry_Child_Theme extends JPry_Singleton {
 	 * @since 1.0
 	 */
 	protected function _actions() {
-
+		// Remove the default Genesis style registration
+		remove_action( 'wp_enqueue_scripts', 'genesis_enqueue_main_stylesheet', 5 );
+		
+		// Our styles
+		add_action( 'wp_enqueue_scripts', array( $this, 'styles' ) );
 	}
 
 	/**
@@ -70,5 +74,13 @@ class JPry_Child_Theme extends JPry_Singleton {
 		
 		// Remove Genesis Readme
 		remove_theme_support( 'genesis-readme-menu' );
+	}
+	
+	/**
+	 * Enqueue styles
+	 */
+	public function styles() {
+		// Main stylesheet
+		wp_enqueue_style( 'jpry-child', get_stylesheet_uri(), array(), CHILD_THEME_VERSION );
 	}
 }
