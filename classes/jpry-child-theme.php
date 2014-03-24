@@ -78,6 +78,8 @@ class JPry_Child_Theme extends JPry_Singleton {
 	
 	/**
 	 * Enqueue styles
+	 * 
+	 * @since 1.0
 	 */
 	public function styles() {
 		// Main stylesheet
