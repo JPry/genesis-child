@@ -21,6 +21,15 @@ if ( ! class_exists( 'JPry_Singleton', false ) ) {
 class JPry_Child_Theme extends JPry_Singleton {
 
 	/**
+	 * The Singleton instance of this class
+	 *
+	 * @since 1.0
+	 *
+	 * @var JPry_Child_Theme
+	 */
+	protected static $instance = null;
+
+	/**
 	 * Constructor.
 	 *
 	 * Add the methods of this class to appropriate WordPress hooks
