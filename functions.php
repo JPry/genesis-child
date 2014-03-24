@@ -14,7 +14,6 @@ $theme = wp_get_theme();
 define( 'CHILD_THEME_NAME', $theme->get( 'Name' ) );
 define( 'CHILD_THEME_URL', 'https://github.com/JPry/genesis-child/' );
 define( 'CHILD_THEME_VERSION', $theme->get( 'Version' ) );
-define( 'CHILD_THEME_DIR', $theme->get_stylesheet_directory() );
 
 // Include the Classes that do all the work
 require_once( CHILD_THEME_DIR . '/classes/jpry-child-theme.php' );
