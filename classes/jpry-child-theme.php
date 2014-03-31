@@ -39,12 +39,6 @@ class JPry_Child_Theme extends JPry_Singleton {
 	protected function __construct() {
 		// All of the add/remove_theme_support() stuff
 		add_action( 'genesis_setup', array( $this, 'child_theme_setup' ), 15 );
-
-		// Actions
-		$this->_actions();
-
-		// Filters
-		$this->_filters();
 	}
 
 	/**
@@ -83,6 +77,12 @@ class JPry_Child_Theme extends JPry_Singleton {
 		
 		// Remove Genesis Readme
 		remove_theme_support( 'genesis-readme-menu' );
+
+		// Actions
+		$this->_actions();
+
+		// Filters
+		$this->_filters();
 	}
 	
 	/**
