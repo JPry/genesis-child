@@ -12,7 +12,7 @@
 
 // Possibly include the JPry_Singleton class
 if ( ! class_exists( 'JPry_Singleton', false ) ) {
-	require_once( CHILD_DIR . '/classes/jpry-singleton.php' );
+	require_once( CHILD_THEME_URL . '/classes/jpry-singleton.php' );
 }
 
 /**
