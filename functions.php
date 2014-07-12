@@ -11,12 +11,13 @@
  
  // Child theme data
 $theme = wp_get_theme();
-define( 'CHILD_THEME_NAME', $theme->get( 'Name' ) );
-define( 'CHILD_THEME_URL', 'https://github.com/JPry/genesis-child/' );
+define( 'CHILD_THEME_NAME',    $theme->get( 'Name' ) );
 define( 'CHILD_THEME_VERSION', $theme->get( 'Version' ) );
+define( 'CHILD_THEME_DIR',     $theme->get_stylesheet_directory() );
+define( 'CHILD_THEME_URL',     'https://github.com/JPry/genesis-child/' );
 
 // Include the Classes that do all the work
-require_once( get_stylesheet_directory() . '/classes/jpry-child-theme.php' );
+require_once( CHILD_THEME_URL . '/classes/jpry-child-theme.php' );
 
 // Call the main theme class to set everything up
 JPry_Child_Theme::get_instance();
